@@ -32,35 +32,55 @@ a {
 
     display: flex;
     justify-content: space-between;
+
+    line-height: 20px;
+    font-weight: 400;
 }
-
-
-/*
-.main-navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: transparent;
-}
-*/
 
 .site-navigation {
-    width: 395px;
     padding: 0;
+    margin-top: 8px;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-content: flex-start;
+
+    list-style: none;
+}
+
+.site-navigation li {
+    margin: 0 24px;
 }
 
 .add-navigation {
-    width: 288px;
     display: flex;
-    justify-content: space-between;
+    align-content: flex-end;
+
     padding: 0;
+    margin-top: 8px;
 
 
     list-style: none;
+}
+
+.add-navigation li {
+    margin: 0 24px;
+}
+
+.add-navigation .position-link {
+    position: relative;
+}
+
+.position-link::before {
+    content: "";
+
+    position: absolute;
+    left: -16.94;
+
+    width: 8.94px;
+    height: 8.94px;
+
+    background-image: url(../images/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
