@@ -32,6 +32,7 @@ a {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     line-height: 20px;
     font-weight: 400;
@@ -49,7 +50,7 @@ a {
 }
 
 .site-navigation li {
-    margin: 0 24px;
+    margin-right: 24px;
 }
 
 .add-navigation {
@@ -64,7 +65,7 @@ a {
 }
 
 .add-navigation li {
-    margin: 0 24px;
+    margin-left: 24px;
 }
 
 .add-navigation .position-link {
@@ -83,4 +84,41 @@ a {
     background-image: url(../images/Vector.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.nav2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400px;
+    color: #616B7F;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-bottom: 80px;
+    margin-top: 32px;
+
+}
+
+
+.services-ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+.services-ul li {
+    margin-right: 32px;
+}
+
+.user-login-ul {
+    list-style: none;
+}
+
+.container4 {
+    display: flex;
+    justify-content: space-between;
 }
