@@ -1,4 +1,6 @@
 body {
+    width: auto;
+
     margin: 0;
     margin-left: 80px;
     margin-right: 80px;
@@ -72,7 +74,7 @@ a {
     position: relative;
 }
 
-.position-link::before {
+.position-link:before {
     content: "";
 
     position: absolute;
@@ -122,3 +124,51 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
+.container4:after {
+    content: "";
+
+    display: flex;
+
+    width: 195.18px;
+    height: 3px;
+
+    margin-right: 13px;
+
+    background-image: url(../images/line2.png);
+    background-repeat: repeat;
+}
+
+.slogan {
+    margin-left: 157px;
+}
+
+.slogan h0 {
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: 800;
+
+}
+
+.slogan p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #616B7F;
+
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.slogan a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #F07100;
+}
+
+.main-img {
+    margin-right: 112px;
+}
+
