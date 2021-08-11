@@ -171,8 +171,8 @@
 
         <section class="modal modal-login">
             <h2>Личный кабинет</h2>
-            <p>Введите свой логин и пароль</p>
-            <form action="#" method="post">
+            <p class="modal-description">Введите свой логин и пароль</p>
+            <form action="#" method="post" class="form-login">
                 <p class="login-form">
                     <label class="visually-hidden" for="user-login">Логин</label>
                     <input class="login-icon-user" id="user-login" type="email" name="login" placeholder="email@example.com">
@@ -183,7 +183,7 @@
                 </p>
                 <p class="login-password-info">
                     <label class="login-checkbox">
-                        <input type="checkbox" name="remember">
+                        <input type="checkbox" name="remember" class="visually-hidden">
                         <span class="checkbox-indicator"></span>
                         Запомнить меня
                     </label>
@@ -191,15 +191,15 @@
                 </p>
                 <button class="button" type="submit">Войти</button>
             </form>
-            <button class="modal-close" type="button">Закрыть</button>
+            <button class="modal-close" type="button"></button>
         </section>
 
         <section class="modal modal-map">
-            <h2>Как до нас добраться</h2>
-            <p>
-                <img src="#" alt="Офис компании по адресу">
-            </p>
-            <button class="modal-close" type="button">Закрыть</button>
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <p><img src="images/map.jpg" width="780px" height="560px" alt="Офис компании по адресу"></p>
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
         </section>
     </body>
 </html>
