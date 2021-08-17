@@ -536,4 +536,117 @@ a {
     padding: 0;
     margin: 0;
     margin-top: 294px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #616B7F;
+}
+
+.possibilities ul {
+    list-style-image: url(../Images/Ellipse204.svg);
+}
+
+.possibilities-ul li {
+    padding-left: 32px;
+    margin-bottom: 32px;
+}
+
+.articles-heading {
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles-heading h2 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+.articles-heading a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+
+    color: #F07100;
+}
+
+.articles-heading img {
+    position: relative;
+    bottom: -4px;
+
+    padding: 0;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.container-articles-main {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.articles-window {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid #DFE1E5;
+    border-radius: 12px;
+
+    padding: 0;
+    margin: 0;
+    margin-right: 31px;
+}
+
+.articles-window:last-child {
+    margin-right: 0;
+}
+
+.articles-window img {
+    margin: auto auto;
+}
+
+.articles-window h3 {
+    padding: 0;
+    margin-bottom: 8;
+    margin-left: 40px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.articles-window p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-left: 40px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #616B7F
+}
+
+.articles-window a {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-left: 40px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #F07100;
 }
