@@ -194,6 +194,36 @@
             <button class="modal-close" type="button"></button>
         </section>
 
+        <script>
+
+            var link = document.querySelector(".login-link");
+            var popup = document.querySelector(".modal-login");
+            var close = document.querySelector(".modal-close");
+            var login = popup.querySelector("[name=login]");
+            var password = popup.querySelector("[name=password]");
+            var form = popup.querySelector("form")
+
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.add("modal-show");
+                login.focus();
+            });
+
+            close.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.remove("modal-show");
+            });
+
+            form.addEventListener("submite", function (evt) {
+                if (!login.value || !password.value) {
+                    evt.preventDefault();
+                    console.log ("Нужно ввести логин и пароль")
+                }
+            });
+
+        </script>
+
+
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
             <p><img src="images/map.jpg" width="780px" height="560px" alt="Офис компании по адресу"></p>
