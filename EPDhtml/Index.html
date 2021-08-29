@@ -48,7 +48,7 @@
 
                 <section class="logo-header">
                     <a href="#">
-                        <img src="images/Logo.svg" width="160px" height="40px" alt="logo">
+                        <img src="images/epd.png" width="160px" height="80px" alt="logo">
                     </a>
                 </section>
 
@@ -106,41 +106,47 @@
 
             <div class="container-forms">
                 <div class="forms">
-                    <section class=" form1">
-                        <h3>Оплатить онлайн</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                        <form action="#" method="post">
-                            <p>
-                                <label for="section-form">Лицевой счет</label>
-                                <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                            </p>
-                        </form>
+                    <section class="section-forms">
+                        <div class="form-one">
+                            <h3><b>Оплатить онлайн</b></h3>
+                            <img src="images/money.png" alt="icon">
+                        </div>
+                        <div class="form-two">
+                            <form action="#" method="post">
+                                <p><b>Лицевой счет</b></p>
+                                <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                            </form>
+                        </div>
                     </section>
         
-                    <section class=" form1">
-                        <h3>Передать показания счетчика</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                        <form action="#" method="post">
-                            <p>
-                                <label for="section-form">Лицевой счет</label>
-                                <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                            </p>
-                        </form>
+                    <section class="section-forms">
+                        <div class="form-one">
+                            <h3><b>Передать  показания<br>счётчика</b></h3>
+                            <img src="images/time.png" alt="icon">
+                        </div>
+                        <div class="form-two">
+                            <form action="#" method="post">
+                                <p><b>Лицевой счет</b></p>
+                                <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                            </form>
+                        </div>
                     </section>
         
-                    <section class=" form1">
-                        <h3>Узнать задолженность</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                        <form action="#" method="post">
-                            <p>
-                                <label for="section-form">Лицевой счет</label>
-                                <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                            </p>
-                        </form>
+                    <section class="section-forms">
+                        <div class="form-one">
+                            <h3><b>Узнать задолженность</b></h3>
+                            <img src="images/warning.png" alt="icon">
+                        </div>
+                        <div class="form-two">
+                            <form action="#" method="post">
+                                <p><b>Лицевой счет</b></p>
+                                <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                            </form>
+                        </div>
                     </section>
-                </div>
+                </div>    
             </div>
-
+            
             <div class="services-heading">
                 <h2><b>Услуги</b></h2>
                 <a href="#">
@@ -322,48 +328,8 @@
 
 <!--Временно-->
 
-<!--
-            <div class="aaa">
-                <section class="aa">
-                    <div class="a">
-                        <h3>Оплатить онлайн</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                    </div>
-                    <div class="b">
-                        <form action="#" method="post">
-                            <p>Лицевой счет</p>
-                            <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                        </form>
-                    </div>
-                </section>
-    
-                <section class="aa">
-                    <div class="a">
-                        <h3>Оплатить онлайн</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                    </div>
-                    <div class="b">
-                        <form action="#" method="post">
-                            <p>Лицевой счет</p>
-                            <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                        </form>
-                    </div>
-                </section>
-    
-                <section class="aa">
-                    <div class="a">
-                        <h3>Оплатить онлайн</h3>
-                        <img src="images/Component-5.png" alt="icon">
-                    </div>
-                    <div class="b">
-                        <form action="#" method="post">
-                            <p>Лицевой счет</p>
-                            <input type="text" placeholder="Введите номер или адрес" name="personal account" id="section-form">
-                        </form>
-                    </div>
-                </section>
-            </div>
--->
+            
+
 <!--Временно-->
 
 
@@ -428,7 +394,7 @@
 
             <div class="second-footer">
                 <section>
-                    <a href="#"><p>© 2017, ООО «МосОблЕИРЦ»</p></a>
+                    <a href="#"><p>© 2021 АО «ЕДИНЫЙ ИНФОРМАЦИОННЫЙ ЦЕНТР ЛО».</p></a>
                 </section>
 
                 <section>
@@ -463,6 +429,24 @@
                 <li><a href="#">Томская область</a></li>
                 <li><a href="#">Ямало-Ненецкий автономный округ</a></li>
             </ul>
+            <button class="modal-close" type="button"></button>
         </section>
+
+        <script>
+            var link = document.querySelector(".position-link");
+            var popup = document.querySelector(".modal-region");
+            var close = document.querySelector(".modal-close");
+
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.add("modal-show");
+                login.focus();
+            });
+
+            close.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.remove("modal-show");
+            });
+        </script>
 
     </body>

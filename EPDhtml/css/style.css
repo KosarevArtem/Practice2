@@ -208,10 +208,28 @@ a {
 }
 
 .main-img {
-
     position: relative;
     top: -80px;
+    
+    z-index: 2;
 }
+
+
+.main-img::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 548px;
+    height: 353px;
+    border-radius: 5000px;
+
+    background: linear-gradient(#0864f4, #4a90ff);
+    z-index: -1;
+}
+
 
 .common-container {
     margin-left: 157px;
@@ -220,55 +238,102 @@ a {
 
 .common-container::after {
     content: "";
-        display: inline-block;
-        width: 195.18px;
-        height: 3px;
+    display: inline-block;
+    width: 195.18px;
+    height: 3px;
         
-        background-image: url(../images/line2.png);
-        background-repeat: repeat;
+    background-image: url(../images/line2.png);
+    background-repeat: repeat;
 
-        margin-right: 11.93px;
-        margin-bottom: 87.5px;
+    margin-right: 11.93px;
+    margin-bottom: 87.5px;
 }
 
 .forms {
+    padding: 0;
+    margin: 0 80px;
+
     display: flex;
     justify-content: space-between;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 53px;
 }
 
-.form1 {
+.section-forms {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 264px;
+    justify-content: space-between;
+
     border: 1px solid #DFE1E5;
     border-radius: 12px;
     margin-right: 32px;
 }
 
-.form1:last-child {
+.section-forms:last-child {
     margin-right: 0;
 }
 
-.form1 h3 {
+.form-one {
+    padding: 0;
+    margin: 0;
     margin-left: 40px;
-    margin-top: 40px;
+    margin-right: 32px;
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
 }
 
-.form1 img {
+.form-one h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    margin-right: auto;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.form-one img {
     width: 48px;
     height: 48px;
 }
 
-.form1 p {
-    margin-top: 64px;
+.form-two form {
+    width: auto;
     margin-left: 40px;
+    margin-right: 40px;
 }
 
+.form-two form p {
+    padding: 0;
+    margin: 0;
+    margin-left: 1px;
+    margin-bottom: 8px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.form-two form input {
+    padding: 16px 16px 16px 16px;
+    margin: 0;
+    margin-bottom: 40px;
+
+    width: 100%;
+
+    border: 1px solid #DFE1E5;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #616B7F;
+}
 
 .container-forms::after {
     content: "";
@@ -946,53 +1011,11 @@ a {
 
 }
 
-/*
-.aaa {
-    padding: 0;
-    margin: 0 80px;
+/*Временно*/
 
-    display: flex;
-    justify-content: space-between;
-}
 
-.aa {
-    width: 100%;
 
-    display: flex;
-    flex-direction: column;
-
-    border: 1px solid #DFE1E5;
-    border-radius: 12px;
-    margin-right: 32px;
-}
-
-.aa:last-child {
-    margin-right: 0;
-}
-
-.a {
-    padding: 0;
-    margin: 0;
-    margin-left: 40px;
-    margin-right: 32px;
-    margin-top: 32px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.a h3 {
-    padding: 0;
-    margin: 0;
-    margin-right: auto;
-}
-
-.b {
-
-}
-
-*/
+/*Временно*/
 
 .modal {
     position: fixed;
@@ -1008,13 +1031,13 @@ a {
 }
 
 .modal-region {
-    top: 20%;
-    left: 50%;
+    top: 30%;
+    left: 40%;
 
     width: auto;
-    max-height: 500px;
+    max-height: auto;
 
-    /*display: none;*/
+    display: none;
 
 }
 
@@ -1036,4 +1059,43 @@ a {
     flex-wrap: wrap;
 
     list-style: none;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width : 22px;
+    height : 22px;
+
+    border: 0;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    left: -3px;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: #000000;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-show {
+    display: block;
 }
