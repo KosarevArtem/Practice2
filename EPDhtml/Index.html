@@ -115,6 +115,7 @@
                             <form action="#" method="post">
                                 <p><b>Лицевой счет</b></p>
                                 <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                                <!--<button class="submit" type="submit"></button>-->
                             </form>
                         </div>
                     </section>
@@ -128,6 +129,7 @@
                             <form action="#" method="post">
                                 <p><b>Лицевой счет</b></p>
                                 <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                                <!--<button class="submit" type="submit"></button>-->
                             </form>
                         </div>
                     </section>
@@ -141,6 +143,7 @@
                             <form action="#" method="post">
                                 <p><b>Лицевой счет</b></p>
                                 <input type="text" placeholder="Введите номер или адрес" name="personal-id">
+                                <!--<button class="submit" type="submit"></button>-->
                             </form>
                         </div>
                     </section>
@@ -224,6 +227,7 @@
                 
                 <section class="picture">
                     <img src="images/mobile.png" alt="">
+                    <div></div>
                 </section>
 
                 <section class="possibilities">
@@ -325,15 +329,6 @@
                     </a>
                 </section>
             </div>
-
-<!--Временно-->
-
-            
-
-<!--Временно-->
-
-
-
         </main>
 
         <footer class="main-footer">
@@ -408,26 +403,26 @@
         </footer>
 
         <section class="modal modal-region">
-            <h3>Выбор региона</h3>
+            <h3><b>Выбор региона</b></h3>
             <ul>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Московская область</a></li>
-                <li><a href="#">Санкт-Петербург</a></li>
-                <li><a href="#">Ленинградская область</a></li>
-                <li><a href="#">Алтайский край</a></li>
-                <li><a href="#">Республика Башкортостан</a></li>
-                <li><a href="#">Владимирская область</a></li>
-                <li><a href="#">Вологодская область</a></li>
-                <li><a href="#">Иркутская область</a></li>
-                <li><a href="#">Краснодарский край</a></li>
-                <li><a href="#">Омская область</a></li>
-                <li><a href="#">Орловская область</a></li>
-                <li><a href="#">Самарская область</a></li>
-                <li><a href="#">Саратовская область</a></li>
-                <li><a href="#">Ставропольский край</a></li>
-                <li><a href="#">Тамбовская область</a></li>
-                <li><a href="#">Томская область</a></li>
-                <li><a href="#">Ямало-Ненецкий автономный округ</a></li>
+                <li><a href="#" class="region"><b>Москва</b></a></li>
+                <li><a href="#" class="region"><b>Московская область</b></a></li>
+                <li><a href="#" class="region"><b>Санкт-Петербург</b></a></li>
+                <li><a href="#" class="region"><b>Ленинградская область</b></a></li>
+                <li><a href="#" class="region"><b>Алтайский край</b></a></li>
+                <li><a href="#" class="region"><b>Республика Башкортостан</b></a></li>
+                <li><a href="#" class="region"><b>Владимирская область</b></a></li>
+                <li><a href="#" class="region"><b>Вологодская область</b></a></li>
+                <li><a href="#" class="region"><b>Иркутская область</b></a></li>
+                <li><a href="#" class="region"><b>Краснодарский край</b></a></li>
+                <li><a href="#" class="region"><b>Омская область</b></a></li>
+                <li><a href="#" class="region"><b>Орловская область</b></a></li>
+                <li><a href="#" class="region"><b>Самарская область</b></a></li>
+                <li><a href="#" class="region"><b>Саратовская область</b></a></li>
+                <li><a href="#" class="region"><b>Ставропольский край</b></a></li>
+                <li><a href="#" class="region"><b>Тамбовская область</b></a></li>
+                <li><a href="#" class="region"><b>Томская область</b></a></li>
+                <li><a href="#" class="region"><b>Ямало-Ненецкий автономный округ</b></a></li>
             </ul>
             <button class="modal-close" type="button"></button>
         </section>
@@ -436,15 +431,23 @@
             var link = document.querySelector(".position-link");
             var popup = document.querySelector(".modal-region");
             var close = document.querySelector(".modal-close");
+            var main = document.querySelector("main")
+            var head = document.querySelector("header")
+            var foot = document.querySelector("footer")
 
             link.addEventListener("click", function (evt) {
                 evt.preventDefault();
+                main.classList.add("opacity-main");
+                head.classList.add("opacity-head");
+                foot.classList.add("opacity-foot");
                 popup.classList.add("modal-show");
-                login.focus();
             });
 
             close.addEventListener("click", function (evt) {
                 evt.preventDefault();
+                main.classList.remove("opacity-main");
+                head.classList.remove("opacity-head");
+                foot.classList.remove("opacity-foot");
                 popup.classList.remove("modal-show");
             });
         </script>

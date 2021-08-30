@@ -210,8 +210,6 @@ a {
 .main-img {
     position: relative;
     top: -80px;
-    
-    z-index: 2;
 }
 
 
@@ -334,6 +332,24 @@ a {
     line-height: 24px;
     color: #616B7F;
 }
+
+
+/*
+.submit {
+    padding: 0px;
+    margin: 0;
+
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../Images/pay.png);
+    background-color: transparent;
+
+    border: 0;
+}
+*/
 
 .container-forms::after {
     content: "";
@@ -605,7 +621,22 @@ a {
     margin-bottom: 115px;
 
     width: auto;
-    height: auto;
+    max-height: 702px;
+}
+
+.picture div {
+    position: relative;
+    bottom: 513px;
+    left: 21px;
+
+
+    width: 287px;
+    height: 505px;
+    background-color: #1069F5;
+    filter: blur(30px);
+    border-radius: 56px;
+
+    z-index: -1;
 }
 
 .possibilities {
@@ -1011,11 +1042,6 @@ a {
 
 }
 
-/*Временно*/
-
-
-
-/*Временно*/
 
 .modal {
     position: fixed;
@@ -1031,11 +1057,11 @@ a {
 }
 
 .modal-region {
-    top: 30%;
-    left: 40%;
+    top: 62px;
+    right: 80px;
 
-    width: auto;
-    max-height: auto;
+    width: 50em;
+    height: auto;
 
     display: none;
 
@@ -1047,12 +1073,19 @@ a {
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
 }
 
 .modal-region ul {
     padding: 0;
     margin-left: 40px;
     margin-bottom: 52px;
+
+    max-height: 344px;
 
     display: flex;
     flex-direction: column;
@@ -1061,13 +1094,21 @@ a {
     list-style: none;
 }
 
+.region {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
 .modal-close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 33px;
+    right: 33px;
 
-    width : 22px;
-    height : 22px;
+    width : 24px;
+    height : 24px;
 
     border: 0;
     background-color: transparent;
@@ -1080,7 +1121,7 @@ a {
     content: "";
 
     position: absolute;
-    left: -3px;
+    right: 3px;
 
     width: 20px;
     height: 2px;
@@ -1098,4 +1139,16 @@ a {
 
 .modal-show {
     display: block;
+}
+
+.opacity-main {
+    opacity: 0.5;
+}
+
+.opacity-head {
+    opacity: 0.5;
+}
+
+.opacity-foot {
+    opacity: 0.5;
 }
