@@ -14,7 +14,12 @@
         <header class="main-header">
             <div class="menu-primary">
                 <img src="Images/epd.png" width="100px" height="100px" alt="">
-                <button type="button" class="menu-primary-opener">Ola</button>
+                <div>
+                    <a href="#" class="position-link-2">
+                        Москва
+                    </a>
+                    <a href="#" class="menu-primary-opener"></a>
+                </div>
             </div>
             <nav class="main-navigation">
                 <div class="main-navigation-wrapper">
@@ -439,36 +444,39 @@
 
         <section class="modal modal-region">
             <h3><b>Выбор региона</b></h3>
-            <ul>
-                <li><a href="#" class="region"><b>Москва</b></a></li>
-                <li><a href="#" class="region"><b>Московская область</b></a></li>
-                <li><a href="#" class="region"><b>Санкт-Петербург</b></a></li>
-                <li><a href="#" class="region"><b>Ленинградская область</b></a></li>
-                <li><a href="#" class="region"><b>Алтайский край</b></a></li>
-                <li><a href="#" class="region"><b>Республика Башкортостан</b></a></li>
-                <li><a href="#" class="region"><b>Владимирская область</b></a></li>
-                <li><a href="#" class="region"><b>Вологодская область</b></a></li>
-                <li><a href="#" class="region"><b>Иркутская область</b></a></li>
-                <li><a href="#" class="region"><b>Краснодарский край</b></a></li>
-                <li><a href="#" class="region"><b>Омская область</b></a></li>
-                <li><a href="#" class="region"><b>Орловская область</b></a></li>
-                <li><a href="#" class="region"><b>Самарская область</b></a></li>
-                <li><a href="#" class="region"><b>Саратовская область</b></a></li>
-                <li><a href="#" class="region"><b>Ставропольский край</b></a></li>
-                <li><a href="#" class="region"><b>Тамбовская область</b></a></li>
-                <li><a href="#" class="region"><b>Томская область</b></a></li>
-                <li><a href="#" class="region"><b>Ямало-Ненецкий автономный округ</b></a></li>
-            </ul>
-            <button class="modal-close" type="button"></button>
+            <div class="modal-container">
+                <ul>
+                    <li><a href="#" class="region"><b>Москва</b></a></li>
+                    <li><a href="#" class="region"><b>Московская область</b></a></li>
+                    <li><a href="#" class="region"><b>Санкт-Петербург</b></a></li>
+                    <li><a href="#" class="region"><b>Ленинградская область</b></a></li>
+                    <li><a href="#" class="region"><b>Алтайский край</b></a></li>
+                    <li><a href="#" class="region"><b>Республика Башкортостан</b></a></li>
+                    <li><a href="#" class="region"><b>Владимирская область</b></a></li>
+                    <li><a href="#" class="region"><b>Вологодская область</b></a></li>
+                    <li><a href="#" class="region"><b>Иркутская область</b></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="region"><b>Краснодарский край</b></a></li>
+                    <li><a href="#" class="region"><b>Омская область</b></a></li>
+                    <li><a href="#" class="region"><b>Орловская область</b></a></li>
+                    <li><a href="#" class="region"><b>Самарская область</b></a></li>
+                    <li><a href="#" class="region"><b>Саратовская область</b></a></li>
+                    <li><a href="#" class="region"><b>Ставропольский край</b></a></li>
+                    <li><a href="#" class="region"><b>Тамбовская область</b></a></li>
+                    <li><a href="#" class="region"><b>Томская область</b></a></li>
+                    <li><a href="#" class="region"><b>Ямало-Ненецкий автономный округ</b></a></li>
+                </ul>
+                <button class="modal-close" type="button"></button>
+            </div>
         </section>
 
         <div class="menu-primary-popup">
-            <button type="button" class="menu-primary-popup-closer">bye</button>
+            <a href="#" class="menu-primary-popup-closer"></a>
             <ul>
                 <li><a href="#">Частным лицам</a></li>
                 <li><a href="#">Для бизнеса</a></li>
                 <li><a href="#">О компании</a></li>
-                <li><a href="#"> Москва</a></li>
                 <li><a href="#">Офисы и точки оплаты</a></li>
             </ul>
 
@@ -478,6 +486,9 @@
                 <li><a href="#">Услуги</a></li>
                 <li><a href="#">Товары</a></li>
                 <li><a href="#">Поддержка клиентов</a></li>
+            </ul>
+
+            <ul>
                 <li><a href="#">Личный кабинет</a></li>
             </ul>
         </div>
@@ -490,9 +501,10 @@
             var link = document.querySelector(".position-link");
             var popup = document.querySelector(".modal-region");
             var close = document.querySelector(".modal-close");
-            var main = document.querySelector("main")
-            var head = document.querySelector("header")
-            var foot = document.querySelector("footer")
+            var main = document.querySelector("main");
+            var head = document.querySelector("header");
+            var foot = document.querySelector("footer");
+            var linksecond = document.querySelector(".position-link-2");
 
             link.addEventListener("click", function (evt) {
                 evt.preventDefault();
@@ -509,6 +521,14 @@
                 foot.classList.remove("opacity-foot");
                 popup.classList.remove("modal-show");
             });
+
+            linksecond.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                main.classList.add("opacity-main");
+                head.classList.add("opacity-head");
+                foot.classList.add("opacity-foot");
+                popup.classList.add("modal-show");
+            });
         </script>
 
         <script>
@@ -518,13 +538,14 @@
 
             openmenu.addEventListener("click", function (evt) {
                 evt.preventDefault();
-                menu.classList.add(".menu-primary-show");
+                menu.classList.add("menu-primary-show");
             });
 
             menucloser.addEventListener("click", function (evt) {
                 evt.preventDefault();
-                menu.classList.remove(".menu-primary-show");
+                menu.classList.remove("menu-primary-show");
             });
+            
         </script>
 
 <!--Srpipts-->

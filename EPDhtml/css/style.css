@@ -90,6 +90,7 @@ a {
 
     position: absolute;
     left: -16.94;
+    top: 4px;
 
     width: 8.94px;
     height: 8.94px;
@@ -1051,6 +1052,8 @@ a {
 .modal {
     position: fixed;
 
+    width: auto;
+
     color : #000000;
 
     background-color: #FFFFFF;
@@ -1061,19 +1064,27 @@ a {
     border-radius: 12px;
 }
 
+.modal-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: auto;
+}
+
 .modal-region {
     top: 62px;
     right: 80px;
 
-    width: 50em;
+    width: auto;
     height: auto;
 
     display: none;
-
 }
+
 
 .modal-region h3 {
     padding: 0;
+    padding-right: 10px;
     margin: 0;
     margin-left: 40px;
     margin-top: 40px;
@@ -1088,6 +1099,7 @@ a {
 .modal-region ul {
     padding: 0;
     margin-left: 40px;
+    margin-right: 40px;
     margin-bottom: 52px;
 
     max-height: 344px;
@@ -1181,20 +1193,50 @@ a {
     display: none;
 
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     width: 30%;
-    height: 100vh;
+    height: auto;
 
-    background-color: blue;
+    background-color: #FFFFFF;
+    border: 2px solid #616B7F;
+    border-radius: 15px;
     z-index: 99;
 }
 
-/*
-.services-head-2 {
-    display: none;
+.menu-primary-popup ul {
+    list-style: none;
 }
-*/
+
+.menu-primary-popup li {
+    padding: 10px 0;
+}
+
+.menu-primary-popup a {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #616B7F;
+}
+
+.menu-primary-popup-closer {
+    display: block;
+
+    position: relative;
+    top: 10px;
+    left: 85%;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../Images/closer-menu.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.menu-primary-show {
+    display: block;
+}
 
 @media screen and (max-width: 1000px) {
     .common-container {
@@ -1212,25 +1254,43 @@ a {
     }
 
     .menu-primary {
+        padding-top: 20px;
         margin-left: 80px;
+        margin-right: 32px;
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-primary div a {
+        color: #616B7F;
+    }
+    
+
+    .menu-primary div {
+        display: flex;
+        align-items: center;
     }
 
     .menu-primary-opener {
+        margin-left: 10px;
+
         display: block;
         width: 30px;
         height: 30px;
 
         position: relative;
 
-        background-color: #000000;
+        background-image: url(../Images/menu-opener.png);
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
     }
 
     .main-img {
         display: none;
     }
+    
 
 }
 
@@ -1304,6 +1364,13 @@ a {
 
     .services-head-2 {
         display: block;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .menu-primary-popup {
+        display: none;
     }
 }
 
