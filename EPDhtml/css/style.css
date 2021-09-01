@@ -1264,6 +1264,9 @@ a {
     }
 
     .menu-primary div a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
         color: #616B7F;
     }
     
