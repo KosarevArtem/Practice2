@@ -13,7 +13,7 @@
 
         <header class="main-header">
             <div class="menu-primary">
-                <img src="Images/epd.png" width="160px" height="80px" alt="">
+                <img src="Images/epd.png" width="100px" height="100px" alt="">
                 <button type="button" class="menu-primary-opener">Ola</button>
             </div>
             <nav class="main-navigation">
@@ -59,7 +59,7 @@
 
                 <section class="logo-header">
                     <a href="#">
-                        <img src="images/epd.png" width="160px" height="80px" alt="logo">
+                        <img src="images/epd.png" width="100px" height="100px" alt="logo">
                     </a>
                 </section>
 
@@ -512,18 +512,18 @@
         </script>
 
         <script>
-            var openmenu = document.querySelector("menu-primary-opener")
-            var menu = document.querySelector("menu-primary-popup")
-            var menucloser = document.querySelector("menu-primary-popup-closer")
+            var openmenu = document.querySelector(".menu-primary-opener")
+            var menu = document.querySelector(".menu-primary-popup")
+            var menucloser = document.querySelector(".menu-primary-popup-closer")
 
             openmenu.addEventListener("click", function (evt) {
                 evt.preventDefault();
-                menu.classList.add("menu-primary-show");
+                menu.classList.add(".menu-primary-show");
             });
 
             menucloser.addEventListener("click", function (evt) {
                 evt.preventDefault();
-                menu.classList.remove("menu-primary-show");
+                menu.classList.remove(".menu-primary-show");
             });
         </script>
 

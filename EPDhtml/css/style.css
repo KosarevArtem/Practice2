@@ -1235,7 +1235,7 @@ a {
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .common-container {
         margin-left: 80px;
     }
