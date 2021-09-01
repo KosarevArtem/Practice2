@@ -129,7 +129,6 @@ a {
 
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
 
     margin-bottom: 80px;
@@ -1159,7 +1158,15 @@ a {
     opacity: 0.5;
 }
 
+
+
+
+
 /*adaptiv*/
+
+
+
+
 
 .menu-primary {
     display: none;
@@ -1189,7 +1196,11 @@ a {
 }
 */
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1000px) {
+    .common-container {
+        margin-left: 80px;
+    }
+
     .main-navigation,
     .nav2 {
         display: none;
