@@ -9,7 +9,13 @@
 
     <body>
 
+<!--Header-->
+
         <header class="main-header">
+            <div class="menu-primary">
+                <img src="Images/epd.png" width="160px" height="80px" alt="">
+                <button type="button" class="menu-primary-opener">Ola</button>
+            </div>
             <nav class="main-navigation">
                 <div class="main-navigation-wrapper">
                     <div class="container">
@@ -42,6 +48,11 @@
 
         </header>
 
+<!--Header-->
+
+
+<!--Main-->
+
         <main class=container3>
 
             <div class="nav2">
@@ -67,6 +78,19 @@
                         </ul>
                 </section>
 
+                <!--
+                <section class="services-head-2">
+                    <select name="" id="">
+                        <option><a href="#">Оплатить</a></option>
+                        <option><a href="#">Передать показания</a></option>
+                        <option><a href="#">Услуги</a></option>
+                        <option><a href="#">Товары</a></option>
+                        <option><a href="#">Поддержка клиентов</a></option>
+                        <option><a href="#">Личный кабинет</a></option>
+                    </select>
+                </section>
+                -->
+
                 <section class="user-login">
                         <ul class="user-login-ul">
                             <li>
@@ -77,7 +101,6 @@
                             </li>
                         </ul>
                 </section>
-                
 
             </div>
 
@@ -99,7 +122,8 @@
                     </section>
         
                     <section class="main-img">
-                        <img src="images/Image-1.png" width="540px" height="444px" alt="image-1">
+                        <img src="images/Image-1.png" alt="image-1">
+                        <div></div>
                     </section>
                 </div>
             </div>
@@ -157,6 +181,7 @@
                     <img src="images/play.png" alt="">
                 </a>
             </div>
+
             <div class="container-services-main">
                 <section class="services-window">
                     <img src="images/Water-mixer.png" alt="">
@@ -331,6 +356,11 @@
             </div>
         </main>
 
+<!--Main-->
+
+
+<!--Footer-->
+
         <footer class="main-footer">
             <div class="container-footer">
                 <div>
@@ -402,6 +432,11 @@
             </div>
         </footer>
 
+<!--Footer-->
+
+
+<!--Modal-Popup-->
+
         <section class="modal modal-region">
             <h3><b>Выбор региона</b></h3>
             <ul>
@@ -427,6 +462,30 @@
             <button class="modal-close" type="button"></button>
         </section>
 
+        <div class="menu-primary-popup">
+            <button type="button" class="menu-primary-popup-closer">bye</button>
+            <ul>
+                <li><a href="#">Частным лицам</a></li>
+                <li><a href="#">Для бизнеса</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#"> Москва</a></li>
+                <li><a href="#">Офисы и точки оплаты</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Оплатить</a></li>
+                <li><a href="#">Передать показания</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Товары</a></li>
+                <li><a href="#">Поддержка клиентов</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+            </ul>
+        </div>
+
+<!--Modal-popup-->
+
+<!--Srpipts-->
+
         <script>
             var link = document.querySelector(".position-link");
             var popup = document.querySelector(".modal-region");
@@ -451,5 +510,25 @@
                 popup.classList.remove("modal-show");
             });
         </script>
+
+        <script>
+            var openmenu = document.querySelector("menu-primary-opener")
+            var menu = document.querySelector("menu-primary-popup")
+            var menucloser = document.querySelector("menu-primary-popup-closer")
+
+            openmenu.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                menu.classList.add("menu-primary-show");
+            });
+
+            menucloser.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                menu.classList.remove("menu-primary-show");
+            });
+
+
+        </script>
+
+<!--Srpipts-->
 
     </body>

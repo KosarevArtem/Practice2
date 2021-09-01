@@ -208,23 +208,29 @@ a {
 }
 
 .main-img {
+    padding: 0;
+    margin: 0;
+
+    width: 540px;
+    height: 444px;
+
     position: relative;
     top: -80px;
 }
 
+.main-img div {
+    padding: 0;
+    margin: 0;
 
-.main-img::before {
-    content: "";
-    display: block;
-
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 353px;
 
     width: 548px;
     height: 353px;
+
+    background-color: #1069F5;
     border-radius: 5000px;
 
-    background: linear-gradient(#0864f4, #4a90ff);
     z-index: -1;
 }
 
@@ -1152,3 +1158,142 @@ a {
 .opacity-foot {
     opacity: 0.5;
 }
+
+/*adaptiv*/
+
+.menu-primary {
+    display: none;
+}
+
+.menu-primary-opener {
+    display: none;
+}
+
+.menu-primary-popup {
+
+    display: none;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+
+    background-color: blue;
+    z-index: 99;
+}
+
+/*
+.services-head-2 {
+    display: none;
+}
+*/
+
+@media screen and (max-width: 1350px) {
+    .main-navigation,
+    .nav2 {
+        display: none;
+    }
+    
+
+    .menu-primary-show {
+        display: block;
+    }
+
+    .menu-primary {
+        margin-left: 80px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-primary-opener {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        position: relative;
+
+        background-color: #000000;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .common-container {
+        margin-left: 80px;
+    }
+
+    .container4 {
+        flex-direction: column;
+    }
+
+    .forms {
+        margin: 0 30px;
+
+        flex-direction: column;
+    }
+
+    .section-forms {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .container-services-main {
+        flex-direction: column;
+    }
+
+    .services-window {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .container-goods-main {
+        flex-direction: column;
+    }
+
+    .goods-window {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .container-information {
+        flex-direction: column;
+    }
+
+    .container-articles-main {
+        flex-direction: column;
+    }
+
+    .articles-window {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .questions {
+        flex-direction: column;
+    }
+
+    .container-footer {
+        flex-direction: column;
+    }
+
+    .services-head {
+        display: none;
+    }
+
+    .user-login {
+        display: none;
+    }
+
+    .services-head-2 {
+        display: block;
+    }
+}
+
+/*adaptiv*/
