@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/Styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-navigation">
+            <img class="header-logo" src="img/epd.png" alt="">
+            <div class="header-container">
+                <form class="header-quick-search" action="" method="get">
+                    <input type="search" placeholder="Поиск по сайту">
+                    <a href="#"></a>
+                </form>
+                <div class="menu-opener">
+                    <a class="modal-link" href="#">Навигация</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="main-wrapper">
+            <section class="main-navigation main-left">
+                <div class="nav-left">
+                    <div class="a">
+                        <p>Общие вопросы IT</p>
+                    </div>
+
+                    <div class="b">
+                        <p>Ошибка #139516</p>
+                    </div>
+
+                    <div class="c">
+                            <p>Ошибка о недоставке сообщения</p>
+                            <p>Добавил(а) Черепанова Олеся 7 дня назад. Обновлено 3 дня назад</p>
+                    </div>
+                </div>
+                
+
+                <div class="description">
+                    <h3>Описание задания</h3>
+                    <p>На почту panda@epd47.ru постоянно приходят сообщение от a.berezin@epd47.ru о недоставке сообщения.<br> "Березин Артем Павлович (a.berezin@epd47.ru). Введенный адрес электронной почты не удалось найти. Проверьте адрес и попытайтесь повторно отправить это сообщение. Если ошибка повторится, обратитесь в службу поддержки."<br> Прошу удалить обращение, которое не может быть доставлено. В самом СРМ мы не направляем никаких писем данному адресату.</p>
+                </div>
+            </section>
+
+            <section class="main-navigation main-right">
+                <div class="nav-right">
+                    <div class="d">
+                        <p>
+                            <a href="#">Редактировать</a>
+                        </p>
+                    </div>
+                    <div class="d">
+                        <p>
+                            <a href="#">Копировать</a>
+                        </p>
+                    </div>
+                    <div class="d">
+                        <p>
+                            <a href="#">Следить</a>
+                        </p>
+                    </div>
+                    <div class="d">
+                        <p>
+                            <a href="#">« Предыдущее<br> | 1/38 | <br>Следующее »</a>
+                        </p>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="information">
+                    <h3>Информация по заданию</h3>
+                    <div class="information-wrapper">
+                        <div class="left-column">
+                            <p>Статус:</p>
+                            <p>Приоритет:</p>
+                            <p>Назначена:</p>
+                            <p>Email абонента:</p>
+                            <p>Начата:</p>
+                            <p>Дата выполнения:</p>
+                            <p>Готовность:</p>
+                            <p>Затраченное время:</p>
+                            <p>Категория обращения:</p>
+                        </div>
+    
+                        <div class="right-column">
+                            <p>Новая</p>
+                            <p>Нормальный (SL3)</p>
+                            <p>Митичева Ольга</p>
+                            <p>-</p>
+                            <p>23.08.2021</p>
+                            <p>-</p>
+                            <p>0%</p>
+                            <p>-</p>
+                            <p>-</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+
+        <section class="history">
+            <h3>История</h3>
+            <ul class="history-information">
+                <li class="title1">Обновлено <span class="bold">Бахарев Виктор 3 дня</span> назад</li>
+                <li class="title2">Параметр <span class="bold">Назначена</span> изменился с <span class="bold">Бахарев Виктор</span> на <span class="bold">Митичева Ольга</span></li>
+                <li class="title3">Завести пользователя a.berezin@epd47.ru и уточнить - откуда поступают письма</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer-wrapper">
+            <a href="">Редактировать</a>
+            <a href="">Копировать</a>
+            <a href="">Следить</a>
+            <a href="">« Предыдущее | 1/38 | Следующее »</a>
+        </section>
+    </footer>
+
+    <div class="modal modal-menu">
+        <ul>
+            <li><a href="#">Обзор</a></li>
+            <li><a href="#">Действия</a></li>
+            <li><a href="#">Задачи</a></li>
+            <li><a href="#">Новая задача</a></li>
+            <li><a href="#">Календарь</a></li>
+            <li><a href="#">Новости</a></li>
+        </ul>
+        <button class="modal-close" type="button"></button>
+    </div>
+
+    <script>
+        var link = document.querySelector(".modal-link");
+        var popup = document.querySelector(".modal-menu");
+        var close = document.querySelector(".modal-close");
+        var main = document.querySelector("main");
+        var head = document.querySelector("header");
+        var foot = document.querySelector("footer");
+
+        link.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            main.classList.add("opacity-main");
+            head.classList.add("opacity-head");
+            foot.classList.add("opacity-foot");
+            popup.classList.add("modal-show");
+        });
+        close.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            main.classList.remove("opacity-main");
+            head.classList.remove("opacity-head");
+            foot.classList.remove("opacity-foot");
+            popup.classList.remove("modal-show");
+        });
+    </script>
+</body>
+</html>
